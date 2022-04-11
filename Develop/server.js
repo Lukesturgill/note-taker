@@ -12,6 +12,7 @@ app.use(express.static('public'));
 app.use('/api', apiNotes);
 app.use('/', htmlPath);
 
+//listen for server start command and console log
 app.listen(PORT, () => {
     console.log(`Now listening on PORT: ${PORT}`);
 });
