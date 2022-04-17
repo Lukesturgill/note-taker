@@ -1,6 +1,6 @@
 const express = require('express');
-const apiNotes = require('Develop/public/assets/js/apiNotes.js');
-const htmlPath = require('Develop/public/assets/js/htmlPath.js');
+const apiNotes = require('./public/assets/js/apiNotes.js');
+const htmlPath = require('./public/assets/js/htmlPath.js');
 
 const app = express();
 

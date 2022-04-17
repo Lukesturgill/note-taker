@@ -1,11 +1,11 @@
 const router = require('express').Router();
 
-const store = require('../db/store');
+const save = require('db/save.js');
 
 // requesting the existing notes
 
 router.get('/notes', (req, res) => {
-    store
+    save
         .getNotes()
         .then(notes => {
             res.json(notes)
@@ -19,7 +19,7 @@ router.get('/notes', (req, res) => {
 
 router.post('/notes', (req, res) => {
     console.log(req.body)
-    store
+    save
         .addNote(req.body)
         .then(note => {
             res.json(note)
