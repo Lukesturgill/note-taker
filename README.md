@@ -13,7 +13,7 @@ A simple note taking application to write down reminders for yourself or interes
 ![Application screenshot](https://github.com/Lukesturgill/note-taker/blob/main/public/assets/appss.png?raw=true)
 
 ## Deployed Application
-* https://pacific-plains-78563.herokuapp.com/notes
+* https://pacific-plains-78563.herokuapp.com
 
 
 ## Contribution
