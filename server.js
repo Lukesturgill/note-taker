@@ -1,6 +1,6 @@
 const express = require('express');
-const apiNotes = require('./public/assets/js/apiNotes.js');
-const htmlPath = require('./public/assets/js/htmlPath.js');
+const apiNotes = require('./routes/apiRoutes.js');
+const htmlRoutes = require('./routes/htmlRoutes.js');
 
 const app = express();
 
@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 app.use('/api', apiNotes);
-app.use('/', htmlPath);
+app.use('/', htmlRoutes);
 
 //listen for server start command and console log
 app.listen(PORT, () => {

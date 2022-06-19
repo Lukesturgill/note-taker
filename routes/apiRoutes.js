@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const save = require('db/save.js');
+const save = require('../db/save');
 
 // requesting the existing notes
 
@@ -28,3 +28,5 @@ router.post('/notes', (req, res) => {
             res.status(500).json(err)
         })
 })
+
+module.exports = router;
