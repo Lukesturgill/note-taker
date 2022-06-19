@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 const save = require('../db/save.js');
 
-// requesting the existing notes
+// Get existing notes
 
 router.get('/notes', (req, res) => {
     save
@@ -15,7 +15,7 @@ router.get('/notes', (req, res) => {
         })
 })
 
-// posting note function route 
+// Add a new note 
 
 router.post('/notes', (req, res) => {
     console.log(req.body)
@@ -28,5 +28,15 @@ router.post('/notes', (req, res) => {
             res.status(500).json(err)
         })
 })
+
+// Delete an existing note
+
+router.delete('/notes/:id', (req, res) =>{
+    save
+        .removeNote(req.params.id)
+        .then(() => res.json({ delete: true}))
+        .catch(err => res.status(500).json(err))
+}
+);
 
 module.exports = router;
