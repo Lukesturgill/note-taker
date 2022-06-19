@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const save = require('../db/save');
+const save = require('../db/save.js');
 
 // requesting the existing notes
 
